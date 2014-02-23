@@ -1,0 +1,10 @@
+[Package]
+name = "nimlibpng"
+version = "0.1"
+author = "Charlie Barto"
+description = """wrapper for the libpng16 library for reading and writing png image files"""
+license = "libpng"
+InstallFiles = """
+libpng-LICENSE.txt
+png.nim
+"""
