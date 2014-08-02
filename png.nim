@@ -1,5 +1,7 @@
 when defined(windows):
   const pnglib = "png.dll"
+elif defined(macosx):
+  const pnglib = "libpng.dylib"
 else:
   const pnglib = "libpng.so"
 
