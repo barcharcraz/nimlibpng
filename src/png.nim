@@ -6,8 +6,6 @@ else:
   const pnglib = "libpng.so"
 
 
-const PNG_LIBPNG_VER_STRING* = "1.6.8"
-const PNG_HEADER_VERSION_STRING* = " libpng version 1.6.8 - December 19, 2013\n"
 const
   PNG_TRANSFORM_IDENTITY* = 0x0000
   PNG_TRANSFORM_STRIP_16* = 0x0001

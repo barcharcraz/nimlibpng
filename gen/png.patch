@@ -1,0 +1,31 @@
+--- /usr/include/libpng16/png.h	2017-08-01 12:05:40.000000000 -0400
++++ png.h	2017-11-28 16:53:46.846847573 -0500
+@@ -2706,28 +2706,6 @@
+    png_uint_32  colormap_entries;
+                            /* Number of entries in the color-map */
+ 
+-   /* In the event of an error or warning the following field will be set to a
+-    * non-zero value and the 'message' field will contain a '\0' terminated
+-    * string with the libpng error or warning message.  If both warnings and
+-    * an error were encountered, only the error is recorded.  If there
+-    * are multiple warnings, only the first one is recorded.
+-    *
+-    * The upper 30 bits of this value are reserved, the low two bits contain
+-    * a value as follows:
+-    */
+-#  define PNG_IMAGE_WARNING 1
+-#  define PNG_IMAGE_ERROR 2
+-   /*
+-    * The result is a two-bit code such that a value more than 1 indicates
+-    * a failure in the API just called:
+-    *
+-    *    0 - no warning or error
+-    *    1 - warning
+-    *    2 - error
+-    *    3 - error preceded by warning
+-    */
+-#  define PNG_IMAGE_FAILED(png_cntrl) ((((png_cntrl).warning_or_error)&0x03)>1)
+-
+    png_uint_32  warning_or_error;
+ 
+    char         message[64];
