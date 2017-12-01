@@ -4,7 +4,8 @@ elif defined(macosx):
   const pnglib = "libpng.dylib"
 else:
   const pnglib = "libpng.so"
-
+const PNG_LIBPNG_VER_STRING* = "1.6.31"
+const PNG_HEADER_VERSION_STRING* = " libpng version 1.6.31 - July 27, 2017\n"
 
 const
   PNG_TRANSFORM_IDENTITY* = 0x0000
@@ -79,11 +80,11 @@ type
   png_const_color_16p = ptr png_color_16
   png_color_16_pp = ptr ptr png_color_16
   png_color_8* = object
-    red: png_byte
-    green: png_byte
-    blue: png_byte
-    grey: png_byte
-    alpha: png_byte
+    red*: png_byte
+    green*: png_byte
+    blue*: png_byte
+    grey*: png_byte
+    alpha*: png_byte
   png_color_8p = ptr png_color_8
   png_color_8pp = ptr ptr png_color_8
   png_alloc_size_t = csize
