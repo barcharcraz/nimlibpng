@@ -51,6 +51,14 @@ const
   PNG_FILTER_TYPE_BASE*      = 0 
   PNG_INTRAPIXEL_DIFFERENCING* = 64
   PNG_FILTER_TYPE_DEFAULT*   = PNG_FILTER_TYPE_BASE
+const
+  PNG_NO_FILTERS* =     0x00
+  PNG_FILTER_NONE* =    0x08
+  PNG_FILTER_SUB* =     0x10
+  PNG_FILTER_UP* =      0x20
+  PNG_FILTER_AVG* =     0x40
+  PNG_FILTER_PAETH* =   0x80
+
 type
   png_uint32 = uint32
   png_double = float64
