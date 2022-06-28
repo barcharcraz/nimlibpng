@@ -69,7 +69,7 @@ type
   png_const_structp = ptr png_struct
   png_structpp = ptr ptr png_struct
   png_const_charp = cstring
-  png_byte = cuchar
+  png_byte = int8
   png_bytep = ptr png_byte
   png_const_bytep = ptr png_byte
   png_bytepp = ptr ptr png_byte
@@ -95,8 +95,8 @@ type
     alpha*: png_byte
   png_color_8p = ptr png_color_8
   png_color_8pp = ptr ptr png_color_8
-  png_alloc_size_t = csize
-  png_size_t = csize
+  png_alloc_size_t = csize_t
+  png_size_t = csize_t
   png_voidp = pointer
   png_const_voidp = pointer
   png_uint_16 = uint16
