@@ -492,7 +492,7 @@ proc png_handle_as_unknown*(png_ptr: png_structp; chunk_name: png_bytep): cint {
     cdecl, importc: "png_handle_as_unknown", dynlib: pnglib.}
 proc png_image_begin_read_from_file*(image: png_imagep; file_name: cstring): cint {.
     cdecl, importc: "png_image_begin_read_from_file", dynlib: pnglib.}
-proc png_image_begin_read_from_stdio*(image: png_imagep; file: TFile): cint {.
+proc png_image_begin_read_from_stdio*(image: png_imagep; file: File): cint {.
     cdecl, importc: "png_image_begin_read_from_stdio", dynlib: pnglib.}
 proc png_image_begin_read_from_memory*(image: png_imagep; 
                                        memory: png_const_voidp; size: png_size_t): cint {.
@@ -507,13 +507,13 @@ proc png_image_write_to_file*(image: png_imagep; file: cstring;
                               convert_to_8bit: cint; buffer: pointer; 
                               row_stride: png_int_32; colormap: pointer): cint {.
     cdecl, importc: "png_image_write_to_file", dynlib: pnglib.}
-proc png_image_write_to_stdio*(image: png_imagep; file: TFile; 
+proc png_image_write_to_stdio*(image: png_imagep; file: File; 
                                convert_to_8_bit: cint; buffer: pointer; 
                                row_stride: png_int_32; colormap: pointer): cint {.
     cdecl, importc: "png_image_write_to_stdio", dynlib: pnglib.}
 proc png_info_init_3*(info_ptr: png_infopp; png_info_struct_size: png_size_t) {.
     cdecl, importc: "png_info_init_3", dynlib: pnglib.}
-proc png_init_io*(png_ptr: png_structp; fp: TFile) {.cdecl, 
+proc png_init_io*(png_ptr: png_structp; fp: File) {.cdecl, 
     importc: "png_init_io", dynlib: pnglib.}
 proc png_longjmp*(png_ptr: png_structp; val: cint) {.cdecl, 
     importc: "png_longjmp", dynlib: pnglib.}
