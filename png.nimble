@@ -1,12 +1,12 @@
 # Package
 
-version       = "0.2.2"
+version       = "0.3.0"
 author        = "Charles Barto"
 description   = "Wrapper around the libpng library for png graphics"
 license       = "MIT"
 # Dependencies
 
-requires "nim >= 0.17.2"
+requires "nim >= 1.2.0"
 
 
 srcDir = "src"
